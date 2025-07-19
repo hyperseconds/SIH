@@ -1,0 +1,7 @@
+timestamp,angular_width,speed,acceleration,mass,energy,source_location,event_type,remarks
+2025-01-15T08:30:00Z,360,750,12.5,1.8e15,2.1e32,S15W25,Halo,"Fast halo CME with shock signature"
+2025-01-16T14:45:00Z,285,620,-8.2,1.2e15,1.4e32,N20E15,Partial Halo,"Asymmetric partial halo CME"
+2025-01-17T19:15:00Z,360,1020,25.8,3.2e15,4.8e32,S08W18,Halo,"Major halo CME with high acceleration"
+2025-01-18T23:30:00Z,195,485,-2.1,8.5e14,7.2e31,N35W42,Wide,"Wide CME with gradual onset"
+2025-01-19T05:45:00Z,360,1520,42.3,5.8e15,8.9e32,S22W08,Halo,"Extreme halo CME with very high speed"
+2025-01-19T07:20:00Z,125,680,8.7,1.1e15,1.2e32,N15E28,Normal,"Fast narrow CME following main event"

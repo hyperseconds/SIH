@@ -1,0 +1,92 @@
+You are an expert hackathon AI developer. Create a Python application with the following requirements:
+
+---
+
+🛰️ **PROJECT OVERVIEW**  
+Title: Identifying Halo CME Events Based on Particle Data from SWIS-ASPEX Payload onboard Aditya-L1  
+Goal: Predict future **Halo Coronal Mass Ejections (CME)** based on solar wind particle data.
+
+---
+
+🧠 **AI REQUIREMENTS**:
+- No libraries like TensorFlow, PyTorch, or scikit-learn.
+- Build a **fully custom Neural Network from scratch** using only Python and NumPy/SciPy.
+- Use **Pycorg** (if relevant for numerical computation or regression optimization).
+- All logic (activation functions, layers, training, loss functions, backpropagation) should be manually coded.
+
+---
+
+📁 **DATA INPUT**:
+- `swis_data.json` contains SWIS Level-2 time-series data (flux, density, temperature, speed). Create a sample JSON structure.
+- `cactus_events.csv` contains timestamps and properties of Halo CME events from CACTUS CME database.
+- Load both and align data based on timestamps.
+
+---
+
+🎯 **OBJECTIVE**:
+- Analyze and learn patterns before CME events using past SWIS data.
+- Predict **whether a CME is likely to occur** using a time-series of SWIS parameters.
+- Implement derived metrics: e.g., moving averages, gradients, combined flux-density indicators.
+- Use threshold logic and your trained neural net to classify and predict future events.
+
+---
+
+📊 **DATABASE**:
+- Use `pgAdmin` (PostgreSQL) to store all parsed SWIS time-series entries and CME prediction outputs.
+- Tables: `swis_data`, `cme_predictions`, `cactus_events`.
+
+---
+
+🖥️ **GUI DESIGN**:
+- Use `Tkinter` for the desktop UI.
+- Use a `Bootstrap-like` design inside Tkinter (colors, panels, headers, buttons).
+- GUI should include:
+    1. Load JSON (`swis_data.json`)
+    2. Load CSV (`cactus_events.csv`)
+    3. Visual plot of time-series data (use `matplotlib`)
+    4. Train Neural Network (with epochs, accuracy, error)
+    5. Live prediction window
+    6. Export prediction results to PostgreSQL or CSV
+
+---
+
+📈 **VISUALIZATION**:
+- Use `Matplotlib` to plot:
+    - SWIS parameters over time
+    - Prediction confidence
+    - Detected CME zones (highlighted)
+
+---
+
+⚙️ **TECHNOLOGIES TO USE**:
+- Python (no external ML libraries)
+- Tkinter GUI with styling
+- NumPy, SciPy
+- Pycorg (for regression or optimization if needed)
+- PostgreSQL (via psycopg2 or SQLAlchemy)
+- Matplotlib for visualization
+
+---
+
+📂 **CODE STRUCTURE**:
+Organize the project into:
+- `main.py` – Main GUI logic
+- `neural_net.py` – All NN code manually written (forward, backward, SGD)
+- `data_loader.py` – JSON/CSV parsing
+- `feature_engineering.py` – Moving averages, thresholds, gradients
+- `database.py` – PostgreSQL connection and operations
+- `visualization.py` – Graph plotting
+
+---
+
+🔥 **IMPORTANT**:
+- No use of TensorFlow, scikit-learn, or Keras.
+- Neural network must be implemented from scratch (with dense layers, ReLU/Sigmoid, loss, SGD).
+- GUI must be smooth and production-ready.
+- Use only the libraries mentioned in the problem statement (NumPy, SciPy, Matplotlib, etc.)
+
+---
+
+🎁 Provide a working sample with dummy data loaded from:
+- `swis_data.json` with at least 100 time steps
+- `cactus_events.csv` with at least 5 CME event timestamps
